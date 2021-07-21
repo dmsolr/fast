@@ -1,0 +1,7 @@
+docker run -d \
+    --name etcd \
+    -p 2379:2379 \
+    -e ALLOW_NONE_AUTHENTICATION=yes \
+    -e ETCD_ADVERTISE_CLIENT_URLS=http://192.168.0.108:2379 \
+    bitnami/etcd:3.4.9
+
