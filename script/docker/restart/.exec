@@ -1,0 +1,9 @@
+#!/bin/bash
+
+id=$(docker ps -aqf name=$1)
+#docker restart $id
+docker kill $id
+docker container rm $id
+
+g docker etcd
+

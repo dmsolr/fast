@@ -1,0 +1,10 @@
+#!/bin/bash
+
+id=$(docker ps -f name=$1 -q)
+if [[ -z $id ]]; then
+    "$! is not found!"
+    exit 1
+fi
+
+docker kill $id
+
